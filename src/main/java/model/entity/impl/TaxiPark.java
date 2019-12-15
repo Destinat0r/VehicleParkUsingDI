@@ -3,9 +3,8 @@ package model.entity.impl;
 import model.entity.Vehicle;
 import model.entity.VehiclePark;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class TaxiPark implements VehiclePark {
 
@@ -16,14 +15,19 @@ public class TaxiPark implements VehiclePark {
     }
 
     public int calculateTotalValue() {
-        return vehicles.stream().mapToInt(v -> v.value()).sum();
+        return !vehicles.isEmpty() ? vehicles.stream().mapToInt(Vehicle::value).sum() : 0;
     }
 
     public List<Vehicle> sortByFuelConsumptionAsc() {
-        return null;
+        List<Vehicle> sorted = new ArrayList<>(vehicles);
+        sorted.sort(Comparator.comparingInt(Vehicle::fuelConsumption));
+        return sorted;
     }
 
-    public List<Vehicle> findCarsWithinGivenMaxSpeedRange(int min, int max) {
-        return null;
+    public List<Vehicle> findVehiclesWithinMaxSpeedRange(int min, int max) {
+        return vehicles.stream()
+                       .filter(x -> x.maxSpeed() >= min && x.maxSpeed() <= max)
+                       .collect(Collectors.toList());
     }
+
 }
