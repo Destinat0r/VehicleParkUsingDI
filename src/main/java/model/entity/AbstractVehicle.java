@@ -2,11 +2,11 @@ package model.entity;
 
 public abstract class AbstractVehicle implements Vehicle {
     private String vendor;
-    private String maxSpeed;
+    private int maxSpeed;
     private String fuelConsumption;
     private int value;
 
-    public AbstractVehicle(String vendor, String maxSpeed, String fuelConsumption, int value) {
+    public AbstractVehicle(String vendor, int maxSpeed, String fuelConsumption, int value) {
         this.vendor = vendor;
         this.maxSpeed = maxSpeed;
         this.fuelConsumption = fuelConsumption;
@@ -21,11 +21,11 @@ public abstract class AbstractVehicle implements Vehicle {
         this.vendor = vendor;
     }
 
-    public String maxSpeed() {
+    public int maxSpeed() {
         return maxSpeed;
     }
 
-    public void setMaxSpeed(String maxSpeed) {
+    public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
