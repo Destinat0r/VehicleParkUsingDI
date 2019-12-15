@@ -1,8 +1,8 @@
 package model.entity.impl;
 
-import model.entity.VehicleImpl;
+import model.entity.AbstractVehicle;
 
-public class Car extends VehicleImpl {
+public class Car extends AbstractVehicle {
 
     private int passengerAmount;
 

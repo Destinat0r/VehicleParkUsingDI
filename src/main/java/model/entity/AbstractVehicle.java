@@ -1,12 +1,12 @@
 package model.entity;
 
-public abstract class VehicleImpl implements Vehicle {
+public abstract class AbstractVehicle implements Vehicle {
     private String vendor;
     private String maxSpeed;
     private String fuelConsumption;
     private int value;
 
-    public VehicleImpl(String vendor, String maxSpeed, String fuelConsumption, int value) {
+    public AbstractVehicle(String vendor, String maxSpeed, String fuelConsumption, int value) {
         this.vendor = vendor;
         this.maxSpeed = maxSpeed;
         this.fuelConsumption = fuelConsumption;
