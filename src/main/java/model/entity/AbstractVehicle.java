@@ -3,10 +3,10 @@ package model.entity;
 public abstract class AbstractVehicle implements Vehicle {
     private String vendor;
     private int maxSpeed;
-    private String fuelConsumption;
+    private int fuelConsumption;
     private int value;
 
-    public AbstractVehicle(String vendor, int maxSpeed, String fuelConsumption, int value) {
+    public AbstractVehicle(String vendor, int maxSpeed, int fuelConsumption, int value) {
         this.vendor = vendor;
         this.maxSpeed = maxSpeed;
         this.fuelConsumption = fuelConsumption;
@@ -29,11 +29,11 @@ public abstract class AbstractVehicle implements Vehicle {
         this.maxSpeed = maxSpeed;
     }
 
-    public String fuelConsumption() {
+    public int fuelConsumption() {
         return fuelConsumption;
     }
 
-    public void setFuelConsumption(String fuelConsumption) {
+    public void setFuelConsumption(int fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
     }
 

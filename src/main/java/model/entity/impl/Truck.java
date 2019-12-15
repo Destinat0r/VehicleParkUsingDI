@@ -6,7 +6,7 @@ public class Truck extends AbstractVehicle {
 
     private int payload;
 
-    public Truck(String vendor, int maxSpeed, String fuelConsumption, int value, int payload) {
+    public Truck(String vendor, int maxSpeed, int fuelConsumption, int value, int payload) {
         super(vendor, maxSpeed, fuelConsumption, value);
         this.payload = payload;
     }

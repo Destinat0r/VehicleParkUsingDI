@@ -6,7 +6,7 @@ public class Car extends AbstractVehicle {
 
     private int passengerAmount;
 
-    public Car(String vendor, int maxSpeed, String fuelConsumption, int value, int passengerAmount) {
+    public Car(String vendor, int maxSpeed, int fuelConsumption, int value, int passengerAmount) {
         super(vendor, maxSpeed, fuelConsumption, value);
         this.passengerAmount = passengerAmount;
     }
