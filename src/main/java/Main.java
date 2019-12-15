@@ -1,5 +1,3 @@
-package model.entity;
-
 import model.entity.impl.Car;
 
 public class Main {
